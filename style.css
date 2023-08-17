@@ -44,12 +44,12 @@ ul{
     display: flex;
     list-style-type: none;
     background-color: #7a6b5c;
-    padding:5px 10px;
-    gap:5px;
     border-radius: 5px;
 }
 ul li{
     cursor: pointer;
+    padding:5px 10px;
+    border: 1px solid black;
 }
 button{
     padding:5px 10px;

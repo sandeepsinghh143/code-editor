@@ -9,9 +9,8 @@ $( document ).ready(function() {
     const html=$(".html textarea");
     const js=$(".js textarea");
     const result=$("iframe");
-    result.contents().find("body").remove("#myscript");
     result.contents().find("body").html(html.val());
-    result.contents().find("body").append(`<script id="myscript">${js.val()}</script>`);
+    document.getElementById("iframe").contentWindow.eval(js.val());
     });
 
     $(".html textarea").keyup(function(e){
@@ -19,9 +18,17 @@ $( document ).ready(function() {
         result.contents().find("body").html(e.target.value);
         });
 
-        $(".css textarea").keyup(function(e){
+    $(".css textarea").keyup(function(e){
             const result=$("iframe");
             result.contents().find("style").text(e.target.value);
             });
+
+    $(".js textarea").keypress(function(e){
+        const mark=";"
+        if(e.key==mark){
+            document.getElementById("iframe").contentWindow.eval($(".js textarea").val());
+        }
+        
+    })
 
 });
