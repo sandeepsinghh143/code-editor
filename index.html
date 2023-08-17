@@ -10,33 +10,34 @@
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <nav class="navbar">
         <h1>Online Code Editor</h1>
         <ul class="buttons toggle">
-            <li>HTML</li>
+            <li id="html-btn">HTML</li>
             <li>CSS</li>
             <li>JS</li>
-            <li>Result</li>
+            <li id="result-btn">Result</li>
         </ul>
         <button class="run-button">Run</>
     </nav>
     <div class="code-boxes">
         <div class="html">
-            <p>HTML</p>
+            <p><i class="fa-brands fa-html5"></i>HTML</p>
             <textarea name="" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="css hide">
-            <p>CSS</p>
+            <p><i class="fa-brands fa-css3-alt"></i>CSS</p>
             <textarea name="" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="js hide">
-            <p>JAVASCRIPT</p>
+            <p><i class="fa-brands fa-js"></i>JAVASCRIPT</p>
             <textarea name="" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="result">
-            <p>OUTPUT</p>
+            <p><i class="fa-brands fa-safari"></i>OUTPUT</p>
             <iframe id="iframe" frameborder="0"></iframe>
         </div>
     </div>

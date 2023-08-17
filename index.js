@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+        
     const result=$("iframe");
     result.find("head") && result.contents().find("head").append(`<style></style>`);
     $(".toggle li").click(function(){
